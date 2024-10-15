@@ -11,3 +11,7 @@ test('returns the number itself for a single number input', () => {
 test('returns the sum of multiple numbers when provided as single string argument in function call', () => {
   expect(add('1,5')).toBe(6);
 });
+
+test('returns the sum of multiple numbers seperated by \\n and comma when provided as single string argument in function call', () => {
+  expect(add('1\n2,3')).toBe(6);
+});
