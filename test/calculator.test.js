@@ -15,3 +15,7 @@ test('returns the sum of multiple numbers when provided as single string argumen
 test('returns the sum of multiple numbers seperated by \\n and comma when provided as single string argument in function call', () => {
   expect(add('1\n2,3')).toBe(6);
 });
+
+test('returns the sum of multiple numbers seperated by dynamic delimiter', () => {
+  expect(add('//;\n1;2')).toBe(3);
+});
