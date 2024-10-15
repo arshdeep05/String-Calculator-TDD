@@ -19,3 +19,7 @@ test('returns the sum of multiple numbers seperated by \\n and comma when provid
 test('returns the sum of multiple numbers seperated by dynamic delimiter', () => {
   expect(add('//;\n1;2')).toBe(3);
 });
+
+test('throws an error for multiple negative numbers', () => {
+  expect(() => add('1,-2,-3')).toThrow('negative numbers not allowed: -2,-3');
+});
